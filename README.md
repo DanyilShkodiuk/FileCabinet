@@ -4,7 +4,7 @@ A small Java exercise in modelling a tree of folders with interfaces and searchi
 
 ## The task
 
-A cabinet holds folders. A folder has a name and a size (`SMALL`, `MEDIUM`, `LARGE`). A `MultiFolder` is a folder that contains other folders, so the cabinet is a tree of any depth. Implement `Cabinet`:
+A cabinet holds folders. A folder has a name and a size label (both strings). A `MultiFolder` is a folder that contains other folders, so the cabinet is a tree of any depth. Implement `Cabinet`:
 
 ```java
 interface Cabinet {
