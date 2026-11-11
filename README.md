@@ -1,5 +1,7 @@
 # FileCabinet
 
+[![CI](https://github.com/DanyilShkodiuk/FileCabinet/actions/workflows/ci.yml/badge.svg)](https://github.com/DanyilShkodiuk/FileCabinet/actions/workflows/ci.yml)
+
 A small Java exercise in modelling a tree of folders with interfaces and searching it recursively.
 
 ## The task
@@ -25,3 +27,13 @@ interface Cabinet {
 The public methods stay small; the recursion lives in private helpers that take the current list of folders.
 
 **Concepts:** interfaces and interface inheritance, recursion, `Optional`, `instanceof`, composite pattern.
+
+## Tests
+
+7 JUnit 5 tests in [`test/FileCabinetTest.java`](test/FileCabinetTest.java) build a small tree (folders inside folders inside folders) and check search by name at any depth, a missing name, search by size across levels, counting nested folders and an empty cabinet. Test folders are Java `record`s implementing the interfaces.
+
+```bash
+mvn test   # requires JDK 17+
+```
+
+GitHub Actions runs them on every push and pull request.
